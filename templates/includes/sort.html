@@ -1,0 +1,36 @@
+<form method="get" id="sort-form">
+  <div class="sort-box">
+    <select name="sort" id="sort-select" onchange="this.form.submit()">
+      <option value="-updated_at" {% if selected_sort == "-updated_at" %}selected{% endif %}>Новые</option>
+      <option value="updated_at" {% if selected_sort == "updated_at" %}selected{% endif %}>Старые</option>
+    </select>
+  </div>
+</form>
+
+<style>
+  .sort-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 200px;
+    transition: 0.3s;
+    background: white;
+  }
+
+  .sort-box:focus-within {
+    border-color: gold;
+    box-shadow: 0 0 10px gold;
+  }
+
+  .sort-box select {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+  }
+</style>

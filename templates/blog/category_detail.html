@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ category }}  {% endblock title %}
+
+{% block content %}
+<h2>Category: {{ category }}</h2>
+<section class="latest-posts">
+    {% for post in category_posts %}
+    <article>
+        <h3><a href="{% url 'blog:posts-detail' post.pk %}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+        <p class="post-date">Opublikovanie: {{ post.created_at|date:'d M Y'}}</p>
+    </article>
+    {% empty %}
+    <p> etoy categoryi poka net </p>
+    {% endfor %}
+</section>
+{% endblock content %}

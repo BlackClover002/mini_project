@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Redoctirovat statiu  {% endblock title %}
+
+{% block content %}
+<div class="create-post-container">
+    <h1>Sozdat statiu</h1>
+    <form method="post" action="{% url 'blog:post-edit' post.pk %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-bin">Save</button>
+    </form>
+</div>
+{% endblock content %}

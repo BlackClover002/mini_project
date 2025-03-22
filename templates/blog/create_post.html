@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Dobavit statii {% endblock title %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p
+
+         <button type="submit"> Dobavit</button>
+    </form>
+
+{% endblock content %}
+
+

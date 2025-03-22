@@ -1,0 +1,59 @@
+<form method="get" id="filter-form">
+  <div class="search-box">
+    <input type="text" name="q" value="{{ query }}" placeholder="Поиск по статьям" list="suggestions">
+    <button type="submit">
+      🔍
+    </button>
+  </div>
+
+  <!-- Список подсказок -->
+  <datalist id="suggestions">
+    <option value="Python">
+    <option value="C">
+    <option value="C++">
+    <option value="C#">
+    <option value="PHP">
+    <option value="Java">
+    <option value="JavaScript">
+    <option value="Haskell">
+    <option value="Lisp">
+    <option value="Go">
+    <option value="Swift">
+    <option value="Ruby">
+    <option value="Kotlin">
+    <option value="Rust">
+    <option value="TypeScript">
+  </datalist>
+</form>
+
+<style>
+  .search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 300px;
+    transition: 0.3s;
+  }
+
+  .search-box:focus-within {
+    border-color: gold;
+    box-shadow: 0 0 10px gold;
+  }
+
+  .search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+</style>
